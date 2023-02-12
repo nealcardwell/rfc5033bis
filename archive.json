@@ -1,7 +1,7 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-02-10T00:06:44.105631+00:00",
-  "repo": "rscheff/drafts",
+  "timestamp": "2023-02-12T00:45:24.224082+00:00",
+  "repo": "rscheff/rfc5033bis",
   "labels": [
     {
       "name": "bug",
@@ -49,6 +49,39 @@
       "color": "ffffff"
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "number": 1,
+      "id": "I_kwDOI7aIXc5eKnqg",
+      "title": "add QUIC as protocol using guidance from here",
+      "url": "https://github.com/rscheff/rfc5033bis/issues/1",
+      "state": "OPEN",
+      "author": "rscheff",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "at the time 5033 was written, only TCP, DCCP and SCTP were around, using CC; nowadays, many more protocols use CC - with QUIC standing out as a here, probably warranting it's explicit mentioning.\r\n",
+      "createdAt": "2023-02-10T15:05:32Z",
+      "updatedAt": "2023-02-10T15:05:32Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 2,
+      "id": "I_kwDOI7aIXc5eKoQ3",
+      "title": "Include Multi-Path (MP) CC into the scope of the document?",
+      "url": "https://github.com/rscheff/rfc5033bis/issues/2",
+      "state": "OPEN",
+      "author": "rscheff",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "MP variants of TCP and QUIC, as well as SCTP may see some deployments - should this document mention something aroud coupled congestion control vs. single path congestion control also?",
+      "createdAt": "2023-02-10T15:06:38Z",
+      "updatedAt": "2023-02-10T15:06:38Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
   "pulls": []
 }
