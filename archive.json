@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-02-12T00:45:24.224082+00:00",
+  "timestamp": "2023-02-14T00:43:26.925871+00:00",
   "repo": "rscheff/rfc5033bis",
   "labels": [
     {
@@ -78,9 +78,17 @@
       "labels": [],
       "body": "MP variants of TCP and QUIC, as well as SCTP may see some deployments - should this document mention something aroud coupled congestion control vs. single path congestion control also?",
       "createdAt": "2023-02-10T15:06:38Z",
-      "updatedAt": "2023-02-10T15:06:38Z",
+      "updatedAt": "2023-02-13T03:01:39Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "VMatrix1900",
+          "authorAssociation": "NONE",
+          "body": "Yes. But we should note that it is still in research.",
+          "createdAt": "2023-02-13T03:01:39Z",
+          "updatedAt": "2023-02-13T03:01:39Z"
+        }
+      ]
     }
   ],
   "pulls": []
