@@ -2,12 +2,12 @@
 
 
 
-TODO Working Group                                              S. Floyd
-Internet-Draft                                                 M. Allman
-Obsoletes: 5033 (if approved)                                ICIR / ICSI
-Intended status: Best Current Practice             R. Scheffenegger, Ed.
-Expires: 14 August 2023                                     NetApp, Inc.
-                                                        10 February 2023
+TODO Working Group                                 R. Scheffenegger, Ed.
+Internet-Draft                                              NetApp, Inc.
+Obsoletes: 5033 (if approved)                                   S. Floyd
+Intended status: Best Current Practice                         M. Allman
+Expires: 21 August 2023                                      ICIR / ICSI
+                                                        17 February 2023
 
 
               Specifying New Congestion Control Algorithms
@@ -49,7 +49,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 14 August 2023.
+   This Internet-Draft will expire on 21 August 2023.
 
 Copyright Notice
 
@@ -457,6 +457,11 @@ Acknowledgments
 
 Authors' Addresses
 
+   Richard Scheffenegger (editor)
+   NetApp, Inc.
+   Email: srichard@netapp.com
+
+
    Sally Floyd
    ICSI Center for Internet Research
    Email: floyd@icir.org
@@ -467,8 +472,3 @@ Authors' Addresses
    ICSI Center for Internet Research
    Email: mallman@icir.org
    URI:   http://www.icir.org/mallman
-
-
-   Richard Scheffenegger (editor)
-   NetApp, Inc.
-   Email: srichard@netapp.com
