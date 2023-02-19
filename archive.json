@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-02-16T00:42:56.784651+00:00",
+  "timestamp": "2023-02-19T00:44:18.210836+00:00",
   "repo": "rscheff/rfc5033bis",
   "labels": [
     {
@@ -62,9 +62,17 @@
       "labels": [],
       "body": "at the time 5033 was written, only TCP, DCCP and SCTP were around, using CC; nowadays, many more protocols use CC - with QUIC standing out as a here, probably warranting it's explicit mentioning.\r\n",
       "createdAt": "2023-02-10T15:05:32Z",
-      "updatedAt": "2023-02-10T15:05:32Z",
+      "updatedAt": "2023-02-18T08:48:12Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "huitema",
+          "authorAssociation": "NONE",
+          "body": "Yes. Note that there is a bit of sadness here, because QUIC was forced to describe use of Reno in RFC 9002, while most deployments use Cubic or BBR. But the WG could not go beyond Reno... because of RFC 5033!",
+          "createdAt": "2023-02-18T08:48:12Z",
+          "updatedAt": "2023-02-18T08:48:12Z"
+        }
+      ]
     },
     {
       "number": 2,
@@ -78,7 +86,7 @@
       "labels": [],
       "body": "MP variants of TCP and QUIC, as well as SCTP may see some deployments - should this document mention something aroud coupled congestion control vs. single path congestion control also?",
       "createdAt": "2023-02-10T15:06:38Z",
-      "updatedAt": "2023-02-13T03:01:39Z",
+      "updatedAt": "2023-02-18T08:45:23Z",
       "closedAt": null,
       "comments": [
         {
@@ -87,8 +95,143 @@
           "body": "Yes. But we should note that it is still in research.",
           "createdAt": "2023-02-13T03:01:39Z",
           "updatedAt": "2023-02-13T03:01:39Z"
+        },
+        {
+          "author": "huitema",
+          "authorAssociation": "NONE",
+          "body": "I have mixed feelings there. If users have payed for a wireless subscription and a land line subscription, why should they not use the full capacity of both paths? I see the \"selfish\" case for proper scheduling, such as not sending delay sensitive traffic on a lossy path. But I don't see anything with the same moral level as \"don't cause congestion\" or \"don't cause buffer bloat\".",
+          "createdAt": "2023-02-18T08:45:10Z",
+          "updatedAt": "2023-02-18T08:45:23Z"
         }
       ]
+    },
+    {
+      "number": 3,
+      "id": "I_kwDOI7aIXc5exgu2",
+      "title": "include guidance from rfc7141",
+      "url": "https://github.com/rscheff/rfc5033bis/issues/3",
+      "state": "OPEN",
+      "author": "rscheff",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "rfc7141 partially updates rfc5033; include relevant sections in the -bis document",
+      "createdAt": "2023-02-17T22:36:13Z",
+      "updatedAt": "2023-02-17T22:36:13Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 4,
+      "id": "I_kwDOI7aIXc5eyTfH",
+      "title": "What about Cubic and BBR?",
+      "url": "https://github.com/rscheff/rfc5033bis/issues/4",
+      "state": "OPEN",
+      "author": "huitema",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "When reading the document status section, that was my first reaction. The purpose of the document is to provide guidelines about protocols that are deemed safe for the Internet, with the assumption that wide scale deployments will only happen after approval by the IETF. With Cubic and BBR we have two examples of massive deployments without any such formal approval. In fact, discussions in the IETF would have quickly pointed out issues such as Cubic amplifying buffer bloat, or BBR having no particular guarantee of fairness, even when sharing with itself. Yet both protocols have been deployed at massive scale. What does that say about the \"real\" status of this document?",
+      "createdAt": "2023-02-18T07:29:45Z",
+      "updatedAt": "2023-02-18T07:29:45Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 5,
+      "id": "I_kwDOI7aIXc5eyT7H",
+      "title": "What does impact on transport protocols mean?",
+      "url": "https://github.com/rscheff/rfc5033bis/issues/5",
+      "state": "OPEN",
+      "author": "huitema",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "The Guidelines section asks developers of new congestion control algorithms to discuss the \"Impact on Standard TCP, SCTP [[RFC2960](https://rscheff.github.io/rfc5033bis/draft-scheffenegger-congress-rfc5033bis.html#RFC2960)], and DCCP [[RFC4340](https://rscheff.github.io/rfc5033bis/draft-scheffenegger-congress-rfc5033bis.html#RFC4340)].\" Maybe I am overly sensitive, but this way of discussing the issue feels dated, from a time when transport and congestion control where specified jointly. I think that ceased to be the case many years ago, for example with implementations of TCP providing choices between multiple congestion algorithms. (Indeed, DCCP itself provides a choice between two algorithms.) The Bis draft should probably present the issue differently.",
+      "createdAt": "2023-02-18T07:37:45Z",
+      "updatedAt": "2023-02-18T07:37:45Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 6,
+      "id": "I_kwDOI7aIXc5eyUJt",
+      "title": "Wireless links are not special cases.",
+      "url": "https://github.com/rscheff/rfc5033bis/issues/6",
+      "state": "OPEN",
+      "author": "huitema",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "The guidelines section as discussion of \"Difficult Environments\", starting with \"The proposed algorithms should be assessed in difficult environments such as paths containing wireless links.\"  Opinion may vary, but wireless links are probably now part of something between \"a vast majority\" and \"a plurality\" of the paths on the Internet.",
+      "createdAt": "2023-02-18T07:42:31Z",
+      "updatedAt": "2023-02-18T07:42:31Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 7,
+      "id": "I_kwDOI7aIXc5eyUqp",
+      "title": "Active Queue Management was not common back then",
+      "url": "https://github.com/rscheff/rfc5033bis/issues/7",
+      "state": "OPEN",
+      "author": "huitema",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "The guideline section discusses \"Investigating a Range of Environments\", with a focus especially on \"Random Early Detection (RED) [[FJ03](https://rscheff.github.io/rfc5033bis/draft-scheffenegger-congress-rfc5033bis.html#FJ03)] and Drop-Tail.\" The IETF and the IRTF have produced several different proposals for Active Queue management, with somewhat different characteristics. Interestingly, there is a tension there between developing Queue Management that \"plays well\" with existing congestion control algorithms, and developing congestion control algorithms that \"take advantage\" of AQM. Not sure what to say there, but at a minimum we should develop expectations about \"signals\" produced by AQM (e.g., the ECN markings of L4S) and reaction by congestion control algorithms.\r\n\r\nTo go further, the could be a discussion of \"honest signals\", such as delays, that are very hard to \"fake\" in routing nodes, other signals such as ECN marks that could be produced by the network at very little cost, and packet losses that fall kind of in between. But we are not writing for the IRTF, so this could be kept brief.",
+      "createdAt": "2023-02-18T07:52:23Z",
+      "updatedAt": "2023-02-18T07:52:23Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 8,
+      "id": "I_kwDOI7aIXc5eyVEx",
+      "title": "Bufferbloat is now just as much a concern as congestion collapse",
+      "url": "https://github.com/rscheff/rfc5033bis/issues/8",
+      "state": "OPEN",
+      "author": "huitema",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "I do remember observing congestion collapse with pre-VJ TCP interacting very poorly with low bandwidth X.25 links. So, yes, don't do that. But buffer bloat, or more specifically long queuing delays, is probably now just as much a concern as congestion collapse. Today, nodes that generate traffic without paying attention to the impact on delays are arguably causing \"buffer bloat collapse\", i.e., rendering a shared path unusable for delay sensitive traffic. Algorithm like Reno or Cubic are major offenders, because they only slow down when packets start getting lost, and thus will effectively fill up all available buffers.",
+      "createdAt": "2023-02-18T07:59:13Z",
+      "updatedAt": "2023-02-18T07:59:13Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 9,
+      "id": "I_kwDOI7aIXc5eyXQh",
+      "title": "The tension between fairness and scaling",
+      "url": "https://github.com/rscheff/rfc5033bis/issues/9",
+      "state": "OPEN",
+      "author": "huitema",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "One of the guidelines is \"Fairness within the Alternate Congestion Control Algorithm\". This a great consideration, but behind that are quite a few problems. The classic fairness evaluation derives from the equation about asymptotic behavior drawn by Matt Mathis, which end up requiring a non linear response to the frequency of a control signal such as packet loss or ECN marks. There are of course two problems. First, time scale, because many connections don't last long enough to approach asymptotic behavior. Second, scaling, as discussed for example in RFC3649. If an algorithm requires ever increasing spacing between control events to sustain larger data rates, then the control loop becomes very long, or, in the case of packet losses very noisy as \"true\" control events get intermixed with random losses.\r\n\r\nIn contrast, algorithms with linear response scale very well, but do not naturally provide fairness. Which is kind of a bummer, and also a research topic. I think the Bis draft will have to recognize that tension somehow, and encourage experimentation.",
+      "createdAt": "2023-02-18T08:36:59Z",
+      "updatedAt": "2023-02-18T08:36:59Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 10,
+      "id": "I_kwDOI7aIXc5eyYAL",
+      "title": "Should we say something about short duration connections?",
+      "url": "https://github.com/rscheff/rfc5033bis/issues/10",
+      "state": "OPEN",
+      "author": "huitema",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "In the Internet, most connections never exit Slow-Start. RFC 5033 kind of explicitly focuses on the long duration connections, because at the time of writing the accepted rule was that the 10% long duration connections were were causing 90% of traffic. I don't know whether that's still true.",
+      "createdAt": "2023-02-18T08:51:33Z",
+      "updatedAt": "2023-02-18T08:51:33Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": []
