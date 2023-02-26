@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-02-23T00:41:54.404925+00:00",
+  "timestamp": "2023-02-26T00:49:40.822411+00:00",
   "repo": "rscheff/rfc5033bis",
   "labels": [
     {
@@ -287,6 +287,22 @@
           "updatedAt": "2023-02-20T08:44:44Z"
         }
       ]
+    },
+    {
+      "number": 11,
+      "id": "I_kwDOI7aIXc5fSKC5",
+      "title": "Keep flows desynchronized during congestion",
+      "url": "https://github.com/rscheff/rfc5033bis/issues/11",
+      "state": "OPEN",
+      "author": "rscheff",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "When queue saturation happens, aim to keep CC reaction desynchronized as much as possible - with tail drop this is not really possible, but AQM especially with ECN may be able to do this.",
+      "createdAt": "2023-02-24T13:06:50Z",
+      "updatedAt": "2023-02-24T13:06:50Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": []
