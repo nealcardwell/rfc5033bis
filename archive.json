@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-06-29T00:52:17.854998+00:00",
+  "timestamp": "2023-07-02T00:52:54.319313+00:00",
   "repo": "rscheff/rfc5033bis",
   "labels": [
     {
@@ -301,6 +301,22 @@
       "body": "When queue saturation happens, aim to keep CC reaction desynchronized as much as possible - with tail drop this is not really possible, but AQM especially with ECN may be able to do this.",
       "createdAt": "2023-02-24T13:06:50Z",
       "updatedAt": "2023-02-24T13:06:50Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 13,
+      "id": "I_kwDOI7aIXc5qTstz",
+      "title": "Sally Floyd",
+      "url": "https://github.com/rscheff/rfc5033bis/issues/13",
+      "state": "OPEN",
+      "author": "gregbo",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Sally Floyd is listed as an author, but she is deceased.  I tried sending email to the given icir.org address, to see if it is monitored, at least, because someone who is not familiar with her might want to contact her using that address.  I received an automated response from googlemail.com indicating that the message bounced due to organizational settings.  If there is a desire to honor her accomplishments by including her as an author, I think that's fine, but perhaps another email address should be given that can provide assistance.",
+      "createdAt": "2023-07-01T05:49:35Z",
+      "updatedAt": "2023-07-01T05:49:35Z",
       "closedAt": null,
       "comments": []
     }
