@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-07-20T00:43:37.116385+00:00",
+  "timestamp": "2023-07-23T00:46:39.733182+00:00",
   "repo": "rscheff/rfc5033bis",
   "labels": [
     {
@@ -117,9 +117,17 @@
       "labels": [],
       "body": "rfc7141 partially updates rfc5033; include relevant sections in the -bis document",
       "createdAt": "2023-02-17T22:36:13Z",
-      "updatedAt": "2023-02-17T22:36:13Z",
+      "updatedAt": "2023-07-21T18:18:31Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "martinduke",
+          "authorAssociation": "NONE",
+          "body": "7141 does not mention 5033, so can you be more specific?",
+          "createdAt": "2023-07-21T18:18:31Z",
+          "updatedAt": "2023-07-21T18:18:31Z"
+        }
+      ]
     },
     {
       "number": 4,
@@ -316,7 +324,31 @@
       "labels": [],
       "body": "Sally Floyd is listed as an author, but she is deceased.  I tried sending email to the given icir.org address, to see if it is monitored, at least, because someone who is not familiar with her might want to contact her using that address.  I received an automated response from googlemail.com indicating that the message bounced due to organizational settings.  If there is a desire to honor her accomplishments by including her as an author, I think that's fine, but perhaps another email address should be given that can provide assistance.",
       "createdAt": "2023-07-01T05:49:35Z",
-      "updatedAt": "2023-07-01T05:49:35Z",
+      "updatedAt": "2023-07-21T14:47:37Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "martinduke",
+          "authorAssociation": "NONE",
+          "body": "IMO it is presumptuous to list her as an author. She should absolutely be in the acknowledgements.",
+          "createdAt": "2023-07-21T14:47:36Z",
+          "updatedAt": "2023-07-21T14:47:36Z"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "id": "I_kwDOI7aIXc5sPYJP",
+      "title": "Update references",
+      "url": "https://github.com/rscheff/rfc5033bis/issues/14",
+      "state": "OPEN",
+      "author": "martinduke",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "A bunch of the references have been obsoleted, e.g. RFC 2960 for SCTP is now RFC 9260.",
+      "createdAt": "2023-07-21T15:08:02Z",
+      "updatedAt": "2023-07-21T15:08:02Z",
       "closedAt": null,
       "comments": []
     }
