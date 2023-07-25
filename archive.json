@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-07-23T00:46:39.733182+00:00",
+  "timestamp": "2023-07-25T00:46:38.705660+00:00",
   "repo": "rscheff/rfc5033bis",
   "labels": [
     {
@@ -324,7 +324,7 @@
       "labels": [],
       "body": "Sally Floyd is listed as an author, but she is deceased.  I tried sending email to the given icir.org address, to see if it is monitored, at least, because someone who is not familiar with her might want to contact her using that address.  I received an automated response from googlemail.com indicating that the message bounced due to organizational settings.  If there is a desire to honor her accomplishments by including her as an author, I think that's fine, but perhaps another email address should be given that can provide assistance.",
       "createdAt": "2023-07-01T05:49:35Z",
-      "updatedAt": "2023-07-21T14:47:37Z",
+      "updatedAt": "2023-07-25T00:22:44Z",
       "closedAt": null,
       "comments": [
         {
@@ -333,6 +333,13 @@
           "body": "IMO it is presumptuous to list her as an author. She should absolutely be in the acknowledgements.",
           "createdAt": "2023-07-21T14:47:36Z",
           "updatedAt": "2023-07-21T14:47:36Z"
+        },
+        {
+          "author": "gregbo",
+          "authorAssociation": "NONE",
+          "body": "OK, sounds reasonable. I spoke with Jean Mahoney of AMS about it, and was advised it should be handled the same way they handled Jon Postel's contributions as an acknowledgement in RFC 9293.",
+          "createdAt": "2023-07-25T00:22:44Z",
+          "updatedAt": "2023-07-25T00:22:44Z"
         }
       ]
     },
