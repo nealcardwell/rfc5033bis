@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-07-25T00:46:38.705660+00:00",
+  "timestamp": "2023-07-27T00:39:31.869265+00:00",
   "repo": "rscheff/rfc5033bis",
   "labels": [
     {
@@ -86,7 +86,7 @@
       "labels": [],
       "body": "MP variants of TCP and QUIC, as well as SCTP may see some deployments - should this document mention something aroud coupled congestion control vs. single path congestion control also?",
       "createdAt": "2023-02-10T15:06:38Z",
-      "updatedAt": "2023-02-18T08:45:23Z",
+      "updatedAt": "2023-07-25T22:18:31Z",
       "closedAt": null,
       "comments": [
         {
@@ -102,6 +102,13 @@
           "body": "I have mixed feelings there. If users have payed for a wireless subscription and a land line subscription, why should they not use the full capacity of both paths? I see the \"selfish\" case for proper scheduling, such as not sending delay sensitive traffic on a lossy path. But I don't see anything with the same moral level as \"don't cause congestion\" or \"don't cause buffer bloat\".",
           "createdAt": "2023-02-18T08:45:10Z",
           "updatedAt": "2023-02-18T08:45:23Z"
+        },
+        {
+          "author": "ekinnear",
+          "authorAssociation": "NONE",
+          "body": "Discussed at IETF 117: \r\n- Christian: Not enough info to make a recommendation\r\n- Gorry: We should think about it\r\n- Ian: Inclination is that we don't have enough information to make a recommendation\r\n- Matt: Impact is no worse than browsers using multiple connections",
+          "createdAt": "2023-07-25T22:18:30Z",
+          "updatedAt": "2023-07-25T22:18:30Z"
         }
       ]
     },
@@ -172,7 +179,7 @@
       "labels": [],
       "body": "The Guidelines section asks developers of new congestion control algorithms to discuss the \"Impact on Standard TCP, SCTP [[RFC2960](https://rscheff.github.io/rfc5033bis/draft-scheffenegger-congress-rfc5033bis.html#RFC2960)], and DCCP [[RFC4340](https://rscheff.github.io/rfc5033bis/draft-scheffenegger-congress-rfc5033bis.html#RFC4340)].\" Maybe I am overly sensitive, but this way of discussing the issue feels dated, from a time when transport and congestion control where specified jointly. I think that ceased to be the case many years ago, for example with implementations of TCP providing choices between multiple congestion algorithms. (Indeed, DCCP itself provides a choice between two algorithms.) The Bis draft should probably present the issue differently.",
       "createdAt": "2023-02-18T07:37:45Z",
-      "updatedAt": "2023-02-20T07:43:52Z",
+      "updatedAt": "2023-07-25T22:20:28Z",
       "closedAt": null,
       "comments": [
         {
@@ -181,6 +188,13 @@
           "body": "Speaking of fairness, I also wonder if there is an accurate definition for it. \r\nThere has been activity on the topic at the IETF (on in academia) : \r\nhttps://datatracker.ietf.org/doc/html/draft-briscoe-tsvarea-fair-02 \r\nhttps://datatracker.ietf.org/doc/html/draft-briscoe-tsvwg-relax-fairness-01\r\nhttps://dl.acm.org/doi/abs/10.1145/3487552.3487834 \r\n\r\nshould this be discussed in the draft ?",
           "createdAt": "2023-02-20T07:43:52Z",
           "updatedAt": "2023-02-20T07:43:52Z"
+        },
+        {
+          "author": "ekinnear",
+          "authorAssociation": "NONE",
+          "body": "Discussed at IETF 117: \r\n- Matt: Replace fairness with freedom from starvation. Fairness only makes sense at low bandwidth.\r\n- Christian: Not focus entirely at fairness, non-starvation goal is good.\r\n- Gorry: Suggestion to put it in other draft, but not in this one\r\n\r\nOverall, get rid of it all together for now",
+          "createdAt": "2023-07-25T22:20:28Z",
+          "updatedAt": "2023-07-25T22:20:28Z"
         }
       ]
     },
@@ -324,7 +338,7 @@
       "labels": [],
       "body": "Sally Floyd is listed as an author, but she is deceased.  I tried sending email to the given icir.org address, to see if it is monitored, at least, because someone who is not familiar with her might want to contact her using that address.  I received an automated response from googlemail.com indicating that the message bounced due to organizational settings.  If there is a desire to honor her accomplishments by including her as an author, I think that's fine, but perhaps another email address should be given that can provide assistance.",
       "createdAt": "2023-07-01T05:49:35Z",
-      "updatedAt": "2023-07-25T00:22:44Z",
+      "updatedAt": "2023-07-25T22:37:26Z",
       "closedAt": null,
       "comments": [
         {
@@ -340,6 +354,13 @@
           "body": "OK, sounds reasonable. I spoke with Jean Mahoney of AMS about it, and was advised it should be handled the same way they handled Jon Postel's contributions as an acknowledgement in RFC 9293.",
           "createdAt": "2023-07-25T00:22:44Z",
           "updatedAt": "2023-07-25T00:22:44Z"
+        },
+        {
+          "author": "ekinnear",
+          "authorAssociation": "NONE",
+          "body": "For context, the text in [RFC 9293](https://www.rfc-editor.org/rfc/rfc9293.html#name-acknowledgments) is: \r\n> This document is largely a revision of RFC 793, of which Jon Postel was the editor. Due to his excellent work, it was able to last for three decades before we felt the need to revise it.\r\n",
+          "createdAt": "2023-07-25T22:37:25Z",
+          "updatedAt": "2023-07-25T22:37:25Z"
         }
       ]
     },
